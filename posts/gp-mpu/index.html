@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>GamePlan MPU project - Part 1 | ePinball.com</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Designing a replacement MPU board for GamePlan pinball machines">
+    <meta name="generator" content="Hugo 0.92.1" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="GamePlan MPU project - Part 1" />
+<meta property="og:description" content="Designing a replacement MPU board for GamePlan pinball machines" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/posts/gp-mpu/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-02-07T22:42:22-05:00" />
+<meta property="article:modified_time" content="2022-02-07T22:42:22-05:00" />
+
+<meta itemprop="name" content="GamePlan MPU project - Part 1">
+<meta itemprop="description" content="Designing a replacement MPU board for GamePlan pinball machines"><meta itemprop="datePublished" content="2022-02-07T22:42:22-05:00" />
+<meta itemprop="dateModified" content="2022-02-07T22:42:22-05:00" />
+<meta itemprop="wordCount" content="1414">
+<meta itemprop="keywords" content="mpu," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="GamePlan MPU project - Part 1"/>
+<meta name="twitter:description" content="Designing a replacement MPU board for GamePlan pinball machines"/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('http://example.org/images/gp-mpu.png');">
+    <div class="pb3-m pb1-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        ePinball.com
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+<div class="ananke-socials">
+  
+    <a href="https://twitter.com/JeremyFleitz" target="_blank" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://github.com/jfleitz" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/jfleitz" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div>
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        
+          <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">GamePlan MPU project - Part 1</h1>
+          
+            <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+              Designing a replacement MPU board for GamePlan pinball machines
+            </h2>
+          
+        
+      </div>
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+      
+      <a href="https://twitter.com/share?url=http://example.org/posts/gp-mpu/&amp;text=GamePlan%20MPU%20project%20-%20Part%201" class="ananke-social-link twitter no-underline" aria-label="share on Twitter">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+        
+      </a>
+    
+      
+      <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://example.org/posts/gp-mpu/&amp;title=GamePlan%20MPU%20project%20-%20Part%201" class="ananke-social-link linkedin no-underline" aria-label="share on LinkedIn">
+        
+        <span class="icon"> <svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+        
+      </a>
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">GamePlan MPU project - Part 1</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2022-02-07T22:42:22-05:00">February 7, 2022</time>
+      
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>GamePlan manufactured cocktail and upright pinball machines from 1978-1985. The cocktail machines were first, and used the &ldquo;MPU-1&rdquo; board. Roger Sharpe was contracted to design their first full/upgright pinball machine SharpShooter which was a huge success for the company. All upright pinball machines used the &ldquo;MPU-2&rdquo;.</p>
+<p>Regardless of the version of the MPU board, they are very similar. The MPU-1 just had less memory than the MPU-2. Both are Z80 based systems, utilizing now obsolete 4 bit 6551 RAM, ROM space, and an 8255 for the PIA. Other than the obsolete components, the boards suffered from the on-board nicad batteries leaking and causing damage. Most of the time the damage caused could never be recovered to make a reliable board.</p>
+<p>Echo Lake had a replacement MPU board available, but it has been awhile since they offered a new run, and I thought this would be a good time to finally give a replacement MPU design a shot.</p>
+<h2 id="goals">Goals</h2>
+<ul>
+<li>Use easy to find components as much as possible
+<ul>
+<li>Use two 74LS377, which is 8bit vs two 74LS379 since they are easier to find</li>
+<li>Use two 74LS138 vs one 74154</li>
+</ul>
+</li>
+<li>Use a Power On Reset w/Watchdog to replace the reset circuitry</li>
+<li>Use NVRAM to eliminate any need of a battery</li>
+<li>Have all game roms selectable by a dip switch bank</li>
+<li>Provide indicators for the different voltage rails</li>
+<li>Keep the same footprint as the existing MPU-2 board</li>
+<li>Use through hole to make it easier for soldering</li>
+<li>Use discrete components vs SIP packages, as I am not too much of a fan of SIP packages (and not as common)</li>
+</ul>
+<h2 id="design">Design</h2>
+<h3 id="z80-microprocessor-circuitry">Z80 Microprocessor Circuitry</h3>
+<p>Of course the MPU-2 schematic is the first place to start. Check out the <a href="../../images/mpu2-schematic.pdf">GP MPU-2 schematic</a>
+The first page is the Z80 MPU circuitry itself, while the second is the peripheral I/O circuitry. The key part to note is the title block, where the addresses are laid out:</p>
+<blockquote>
+<p>ROM (A/B/C) are addressed 0000-17FF
+RAM (6810 and the 6551s) are addressed at 8C00-8D7F</p>
+</blockquote>
+<p><img src="/images/gp-titleblock.png" alt="Title Block"></p>
+<h3 id="ramrom-circuitry">Ram/Rom circuitry</h3>
+<p>Thomas Scherrer&rsquo;s site <a href="http://www.z80.info/">z80 info</a> has a very simple Z80 test system found <a href="http://www.z80.info/gfx/z80test.gif">here</a></p>
+<p>Using his design keeps things simple. We will just use a 6264 vs the 55257, as an 8Kx8 RAM is plenty for GamePlan. This will also allow us to use any of the NVRAM products out there in the 6264 configuration.</p>
+<p>For the ROM, the largest &ldquo;Game footprint&rdquo; is Cyclopes with 3 2732s. That is 12kx8 of Rom space required. A 27128 is 16kx8, which will handle the size of Cyclopes. Utilizing a 4 bank dip switch, we can use a 27C020,a 2Mx8 chip, and have the top 4 Address lines (A14-A17) for selecting what game we are running. This provides space for 16 games.</p>
+<h3 id="watchdog--reset">Watchdog / Reset</h3>
+<p>For the Watchdog / reset, the Z80 and the CTC are <em>active-low</em> reset, whereas the 8255 is <em>active-high</em>. The MIC1232 is a great fit for this application since it has both as an output. The output of <code>strobe 10/display clock 4</code> will be used for the watchdog timer reset, just like the MPU-2 had.</p>
+<p><img src="/images/gp-watchdog.png" alt="Watchdog"></p>
+<h3 id="right--peripheral-interface">Right / Peripheral Interface</h3>
+<p>The peripheral interfaces are kept the same as the original MPU-2, with two minor exceptions.
+The Latches used for the Solenoid and Sound ports were 73LS379, which are 4-bit registers and are difficult to find. I have plenty, but why design with the obsolete part? The 74LS377 is 8-bit and easier to find, so this will be used instead.</p>
+<p>On the original board a 74154, which is a 4-16 line decoder, is used for driving the strobes. These are difficult to find as well. You can accomplish the same with 2 74138s multiplexed.</p>
+<p><img src="/images/gp-strobes.png" alt="Strobes"></p>
+<h2 id="kicad-work">KiCad work</h2>
+<p>I have used KiCad for years now for other projects and love it. It is easy to use, powerful and cross-platform. I did have a hiccup though while designing, in that I started with KiCad 5 and upgraded to KiCad 6 mid-design. I recommend not doing this to avoid a minor headache.</p>
+<p>I knew I was going to use OshPark for my proto board set, which OshPark has instructions for using KiCad and what your Design Rules should be. I recommend defining these as soon as possible.</p>
+<p>Using KiCad and starting with the schematics, the diagrams were drawn &ldquo;Atari Style&rdquo; in using labels to avoid the clutter of traces everywhere. I also tried to group circuits with similar functionality on each sheet. Power pins for each component were put on one sheet as well.</p>
+<p>Once the schematic was drawn up, I went through and assigned through hole footprints to each device. Next was running the &ldquo;Electrical Rules Checker&rdquo; and getting all of the warnings and errors addressed.</p>
+<p>After the schematic was complete and double checked with both the GamePlan MPU schematic as well as Thomas Scherrer&rsquo;s Z80 system schematic, the netlist was exported to PCBNew.</p>
+<p>The mounting holes were first put in place to get an idea of the minimum board size I could make, to keep it as cheap as possible. I also wanted to avoid having to cut any wire ties or make any cable extensions too though, so I didn&rsquo;t want to move any headers too far.</p>
+<p>Components were then placed, with the ratsnest opinionating where components reside. I wanted to keep components facing the same direction as much as possible too, to avoid an IC being installed in the wrong direction.</p>
+<p>I had to create a new part for the Display connectors, which are saved in the library with the project.
+<img src="/images/disp-connector.png" alt="Display Connector"></p>
+<p>I defined the common trace sizes to be 0.012in for data and low power use, 0.06in for main power, and 0.05in for med power use.</p>
+<p>Keeping VIA count to a minimum, the routing was done manually, assisted with PCBNew&rsquo;s routing tool to ensure Design Rules are followed.</p>
+<p>Once the board was laid out and traces have been routed, the DRC (Design Rule Check) tool was used to identify all items that needed to be fixed. Traces were moved, Components locations were moved etc.</p>
+<p>Finally the text for the ROM selection was added.</p>
+<h2 id="combined-rom">Combined ROM</h2>
+<p>To make the combined ROM, all game roms were downloaded and put into separate folders. The roms were combined to make one binary. Each binary was then padded out to a 16k size (like a 27128). Finally each ROM was appended to each other to make up the combined ROM.</p>
+<p>I did this with Linux, which Mac would be similar:</p>
+<ol>
+<li>
+<p>Create a 16k file with 0xFF using the <code>tr</code> command. (<code>tr</code> uses octcal numbers, which is why 377):</p>
+<pre tabindex="0"><code>dd if=/dev/zero ibs=1k count=16 | tr &quot;\000&quot; &quot;\377&quot; &gt;blank16k.bin
+</code></pre></li>
+<li>
+<p>Also lets create a 2mb file with 0xFF as well, doing the same steps above, but 2mb:</p>
+<pre tabindex="0"><code>dd if=/dev/zero ibs=1k count=256 | tr &quot;\000&quot; &quot;\377&quot; &gt;blank2mb.bin
+</code></pre></li>
+<li>
+<p>For each of the game roms, we will copy the <code>blank16k.bin</code> file as the position holder, and then copy the game rom itself into the position. This way the end result will be the game rom and however many 0xff&rsquo;s it needs to fulfill the space:</p>
+<pre tabindex="0"><code>cp blank16k.bin 1-output.bin
+dd if=sharpshooter.bin of=1-output.bin conv=notrunc
+
+cp blank16k.bin 2-output.bin
+dd if=globalwarfare.bin of=2-output.bin conv=notrunc
+
+#keep doing this ^ for the remaining roms
+</code></pre></li>
+<li>
+<p>Finally, we take all of the padded game roms, combine them, and then copy into our 2mb file from step 2.</p>
+</li>
+<li>
+<p>Final rom image is stored on github</p>
+</li>
+</ol>
+<h1 id="bloopers">Bloopers</h1>
+<ul>
+<li>
+<p>If you notice, that there are a few spots that were skipped in the ROM selection. This was not done on purpose, but since I had it printed on the final board, I might as well stick with it :)</p>
+</li>
+<li>
+<p>I wanted to print out the board so that I can make sure the alignment of the holes and the connectors worked. I needed Legal paper, which I didn&rsquo;t have any. I ended up finding a copy of my home mortgage and printed on the back of it.</p>
+</li>
+<li>
+<p>I added the LEDs for monitoring the different power rail voltages at the very end and after I already sent the board to OshPark. I saw I was able to cancel without penalty, so I did so and put the LEDs onto the board. When I ran the DRC check, <em><strong>I saw that I actually missed 3 traces!</strong></em> That would have been a big miss. Lesson learned; make sure to check the &ldquo;unconnected items&rdquo; tab in the DRC tool!
+<img src="/images/drc-traces.png" alt="DRC tool"></p>
+</li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>The Board has been sent out to OshPark, and the parts that I didn&rsquo;t have in stock have been ordered from Mouser. Next up is building and testing!
+<img src="/images/newmpu-top.png" alt="mpu top"> <img src="/images/newmpu-bottom.png" alt="mpu bottom"></p>
+<ul class="pa0">
+  
+   <li class="list di">
+     <a href="/tags/mpu" class="link f5 grow no-underline br-pill ba ph3 pv2 mb2 dib black sans-serif">mpu</a>
+   </li>
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  ePinball.com 2022 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+    <a href="https://twitter.com/JeremyFleitz" target="_blank" class="twitter ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="Twitter link" rel="noopener" aria-label="follow on Twitter——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://github.com/jfleitz" target="_blank" class="github ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="GitHub link" rel="noopener" aria-label="follow on GitHub——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+    <a href="https://www.linkedin.com/in/jfleitz" target="_blank" class="linkedin ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l mr1" title="LinkedIn link" rel="noopener" aria-label="follow on LinkedIn——Opens in a new window">
+      
+        <span class="icon"><svg style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span>
+      
+<span class="new-window"><svg  height="8px"  style="enable-background:new 0 0 1000 1000;" version="1.1" viewBox="0 0 1000 1000"  xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M598 128h298v298h-86v-152l-418 418-60-60 418-418h-152v-86zM810 810v-298h86v298c0 46-40 86-86 86h-596c-48 0-86-40-86-86v-596c0-46 38-86 86-86h298v86h-298v596h596z" style="fill-rule:evenodd;clip-rule:evenodd;"/>
+</svg>
+</span></a>
+  
+</div></div>
+  </div>
+</footer>
+
+  </body>
+</html>

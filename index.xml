@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ePinball.com</title>
+    <link>http://example.org/</link>
+    <description>Recent content on ePinball.com</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Feb 2022 22:42:22 -0500</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GamePlan MPU project - Part 1</title>
+      <link>http://example.org/posts/gp-mpu/</link>
+      <pubDate>Mon, 07 Feb 2022 22:42:22 -0500</pubDate>
+      
+      <guid>http://example.org/posts/gp-mpu/</guid>
+      <description>GamePlan manufactured cocktail and upright pinball machines from 1978-1985. The cocktail machines were first, and used the &amp;ldquo;MPU-1&amp;rdquo; board. Roger Sharpe was contracted to design their first full/upgright pinball machine SharpShooter which was a huge success for the company. All upright pinball machines used the &amp;ldquo;MPU-2&amp;rdquo;.
+Regardless of the version of the MPU board, they are very similar. The MPU-1 just had less memory than the MPU-2. Both are Z80 based systems, utilizing now obsolete 4 bit 6551 RAM, ROM space, and an 8255 for the PIA.</description>
+    </item>
+    
+  </channel>
+</rss>
