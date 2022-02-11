@@ -2,32 +2,32 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://epinball.github.io/</loc>
     <lastmod>2022-02-07T22:42:22-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://example.org/posts/gp-mpu/</loc>
+    <loc>https://epinball.github.io/posts/gp-mpu/</loc>
     <lastmod>2022-02-07T22:42:22-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://example.org/tags/mpu/</loc>
+    <loc>https://epinball.github.io/tags/mpu/</loc>
     <lastmod>2022-02-07T22:42:22-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://example.org/posts/</loc>
+    <loc>https://epinball.github.io/posts/</loc>
     <lastmod>2022-02-07T22:42:22-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://epinball.github.io/tags/</loc>
     <lastmod>2022-02-07T22:42:22-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://epinball.github.io/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
