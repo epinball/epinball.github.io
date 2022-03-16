@@ -3,26 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://epinball.github.io/</loc>
-    <lastmod>2022-02-18T18:28:00-05:00</lastmod>
+    <lastmod>2022-03-09T17:15:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>https://epinball.github.io/posts/gp-mpu-part2/</loc>
-    <lastmod>2022-02-18T18:28:00-05:00</lastmod>
+    <loc>https://epinball.github.io/posts/gp-mpu-part3/</loc>
+    <lastmod>2022-03-09T17:15:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://epinball.github.io/tags/mpu/</loc>
-    <lastmod>2022-02-18T18:28:00-05:00</lastmod>
+    <lastmod>2022-03-09T17:15:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://epinball.github.io/posts/</loc>
-    <lastmod>2022-02-18T18:28:00-05:00</lastmod>
+    <lastmod>2022-03-09T17:15:15-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
     <loc>https://epinball.github.io/tags/</loc>
+    <lastmod>2022-03-09T17:15:15-05:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://epinball.github.io/posts/gp-mpu-part2/</loc>
     <lastmod>2022-02-18T18:28:00-05:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
