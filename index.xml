@@ -6,7 +6,18 @@
     <description>Recent content on ePinball.com</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 09 Mar 2022 17:15:15 -0500</lastBuildDate><atom:link href="https://epinball.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 May 2022 17:15:15 -0500</lastBuildDate><atom:link href="https://epinball.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GamePlan MPU project - v1.4</title>
+      <link>https://epinball.github.io/posts/gp-mpu-v14/</link>
+      <pubDate>Wed, 11 May 2022 17:15:15 -0500</pubDate>
+      
+      <guid>https://epinball.github.io/posts/gp-mpu-v14/</guid>
+      <description>The latest revision of the GamePlan Multi MPU board, v1.4.
+These can be ordered blank through PCBWay through the project page here
+Changes with Version 1.4 All Vias have been enlarged The Vias have been increased in size to allow for 28 or 30 gauge wire to be used for jumping if necessary. Duplicate vias have been added as well to allow for redundant paths, as well as supporting a higher current flow.</description>
+    </item>
+    
     <item>
       <title>GamePlan MPU project - Part 3</title>
       <link>https://epinball.github.io/posts/gp-mpu-part3/</link>
